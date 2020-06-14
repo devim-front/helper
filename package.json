@@ -1,6 +1,6 @@
 {
   "name": "@devim-front/helper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Содержит реализацию шаблона проектирования 'помощник'.",
   "main": "./build/index.js",
   "publishConfig": {
