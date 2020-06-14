@@ -8,9 +8,6 @@
     "access": "public"
   },
   "types": "./build/index.d.ts",
-  "files": [
-    "./build/**/*"
-  ],
   "scripts": {
     "build:drop": "rimraf build",
     "build:make": "tsc",
