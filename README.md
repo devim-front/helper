@@ -37,7 +37,7 @@ npm i -S @devim-front/helper
 ```typescript
 // PhoneHelper.ts
 import { Helper as Base } from '@devim-front/helper';
-import { ExpectationError, ArgumentError } from '@devim-front/error';
+import { UnreachableError, ExpectationError } from '@devim-front/error';
 
 export class PhoneHelper extends Base {
   public static validateNumber(value: number) {
@@ -52,9 +52,8 @@ export class PhoneHelper extends Base {
     const isValid = this.validateNumber(value);
 
     if (!isValid) {
-      throw new ArgumentError(
-        'PhoneHelper.parseNumber',
-        'value',
+      throw new ExpectationError(
+        'PhoneHelper.parseNumber(value)',
         'in format 70000000000',
         value
       );
@@ -67,9 +66,8 @@ export class PhoneHelper extends Base {
     const isValid = this.validateDisplay(value);
 
     if (!isValid) {
-      throw new ArgumentError(
-        'PhoneHelper.parseDisplay',
-        'value',
+      throw new ExpectationError(
+        'PhoneHelper.parseDisplay(value)',
         'in format "+70000000000"',
         value
       );
@@ -78,7 +76,7 @@ export class PhoneHelper extends Base {
     const match = value.match(/^\+7\s\((\d{3})\)\s(\d{3})-(\d{2})-(\d{2})$/);
 
     if (match == null) {
-      throw new ExpectationError('match', 'defined', match);
+      throw new UnreachableError();
     }
 
     const [, partA, partB, partC, partD] = match;
@@ -94,7 +92,7 @@ export class PhoneHelper extends Base {
     const match = phone.match(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})^/);
 
     if (match == null) {
-      throw new ExpectationError('match', 'defined', match);
+      throw new UnreachableError();
     }
 
     const [, partA, partB, partC, partD] = match;
