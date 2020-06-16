@@ -7,4 +7,4 @@
 ### Classes
 
 * [Helper](classes/helper.md)
-* [NewNotAllowedError](classes/newnotallowederror.md)
+* [NewNotSupportedError](classes/newnotsupportederror.md)

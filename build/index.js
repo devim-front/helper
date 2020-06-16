@@ -11,4 +11,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./Helper"), exports);
-__exportStar(require("./NewNotAllowedError"), exports);
+__exportStar(require("./NewNotSupportedError"), exports);

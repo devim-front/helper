@@ -1,13 +1,14 @@
+import { NotSupportedError } from '@devim-front/error';
+
 /**
  * Ошибка, которая возникает, когда в коде происходит попытка создать экземпляр
  * хэлпера.
  */
-export class NewNotAllowedError extends Error {
+export class NewNotSupportedError extends NotSupportedError {
   /**
    * Создает экземпляр ошибки.
    */
   public constructor() {
-    super('Creating an instance of a helper is prohibited');
-    this.name = 'HelperError';
+    super('It is forbidden to create an instance of the Helper');
   }
 }

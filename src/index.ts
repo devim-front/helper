@@ -1,2 +1,2 @@
 export * from './Helper';
-export * from './NewNotAllowedError';
+export * from './NewNotSupportedError';

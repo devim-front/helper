@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Helper = void 0;
-var NewNotAllowedError_1 = require("./NewNotAllowedError");
+var NewNotSupportedError_1 = require("./NewNotSupportedError");
 /**
  * Базовый класс хэлпера.
  */
@@ -10,7 +10,7 @@ var Helper = /** @class */ (function () {
      * Создает экземпляр хэлпера.
      */
     function Helper() {
-        throw new NewNotAllowedError_1.NewNotAllowedError();
+        throw new NewNotSupportedError_1.NewNotSupportedError();
     }
     return Helper;
 }());

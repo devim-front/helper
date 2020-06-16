@@ -51,5 +51,7 @@
     "url": "https://github.com/devim-front/helper/issues"
   },
   "homepage": "https://github.com/devim-front/helper#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@devim-front/error": "^1.0.1"
+  }
 }

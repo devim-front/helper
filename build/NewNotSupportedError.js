@@ -13,21 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NewNotAllowedError = void 0;
+exports.NewNotSupportedError = void 0;
+var error_1 = require("@devim-front/error");
 /**
  * Ошибка, которая возникает, когда в коде происходит попытка создать экземпляр
  * хэлпера.
  */
-var NewNotAllowedError = /** @class */ (function (_super) {
-    __extends(NewNotAllowedError, _super);
+var NewNotSupportedError = /** @class */ (function (_super) {
+    __extends(NewNotSupportedError, _super);
     /**
      * Создает экземпляр ошибки.
      */
-    function NewNotAllowedError() {
-        var _this = _super.call(this, 'Creating an instance of a helper is prohibited') || this;
-        _this.name = 'HelperError';
-        return _this;
+    function NewNotSupportedError() {
+        return _super.call(this, 'It is forbidden to create an instance of the Helper') || this;
     }
-    return NewNotAllowedError;
-}(Error));
-exports.NewNotAllowedError = NewNotAllowedError;
+    return NewNotSupportedError;
+}(error_1.NotSupportedError));
+exports.NewNotSupportedError = NewNotSupportedError;

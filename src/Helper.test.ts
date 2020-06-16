@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 import { Helper } from './Helper';
-import { NewNotAllowedError } from './NewNotAllowedError';
+import { NewNotSupportedError } from './NewNotSupportedError';
 
 describe('Helper', () => {
   class TestHelper extends Helper {
@@ -12,7 +12,10 @@ describe('Helper', () => {
 
   describe('constructor', () => {
     it('should throws an error', () => {
-      assert.throw(() => TestHelper.create(), new NewNotAllowedError().message);
+      assert.throw(
+        () => TestHelper.create(),
+        new NewNotSupportedError().message
+      );
     });
   });
 });
